@@ -77,6 +77,7 @@ Prompt the user to enter three integers. How are the integers ordered?
 There are five possible outputs.
 * `Strictly increasing.`, where each integer is greater than the previous.
 * `Increasing.`, where each integer is greater than or equal to the previous.
+* `Same.`, where all integers are equal to one another.
 * `Decreasing.`, where each integer is less than or equal to the previous.
 * `Strictly decreasing.`, where each integer is less than the previous.
 * `Unordered.`, where none of the above applies.
