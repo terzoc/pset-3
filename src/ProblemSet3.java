@@ -29,7 +29,7 @@ public class ProblemSet3 {
         // comment out or uncomment as needed
 
         // ps.sign();          // executes Exercise 1
-        ps.parity();        // executes Exercise 2
+        // ps.parity();        // executes Exercise 2
         ps.ordered();       // executes Exercise 3
         ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
@@ -83,7 +83,17 @@ public class ProblemSet3 {
      */
 
     public void ordered() {
+      System.out.println("\nEnter three integers.");
+      System.out.print("\nEnter integer: ");
+      long int1 = in.nextLong();
+      System.out.print("Enter integer: ");
+      long int2 = in.nextLong();
+      System.out.print("Enter integer: ");
+      long int3 = in.nextLong();
 
+      if ((int1 < int2) && ) {
+
+      }
     }
 
     /*
