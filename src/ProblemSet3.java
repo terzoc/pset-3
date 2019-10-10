@@ -118,9 +118,12 @@ public class ProblemSet3 {
       final double C_VALUE = 2;
       final double D_VALUE = 1;
       final double F_VALUE = 0;
+<<<<<<< HEAD
       final double PLUS_BONUS = 0.33;
       final double MINUS_PENALTY = -0.33;
       
+=======
+>>>>>>> eeef01b53ada9c3bbd3f42b9958095d9ec5cdc87
 
     }
 
