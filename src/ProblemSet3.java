@@ -113,6 +113,11 @@ public class ProblemSet3 {
      */
 
     public void gpa() {
+      final double A_VALUE = 4;
+      final double B_VALUE = 3;
+      final double C_VALUE = 2;
+      final double D_VALUE = 1;
+      final double F_VALUE = 0;
 
     }
 
