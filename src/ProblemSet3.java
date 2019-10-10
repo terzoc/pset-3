@@ -28,8 +28,8 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        // ps.sign();          // executes Exercise 1
-        // ps.parity();        // executes Exercise 2
+        ps.sign();          // executes Exercise 1
+        ps.parity();        // executes Exercise 2
         ps.ordered();       // executes Exercise 3
         ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
@@ -91,8 +91,18 @@ public class ProblemSet3 {
       System.out.print("Enter integer: ");
       long int3 = in.nextLong();
 
-      if ((int1 < int2) && ) {
-
+      if ((int1 < int2) && int2 < int3) {
+        System.out.println("Strictly increasing.");
+      }else if (int1 == int2 && int2 == int3) {
+        System.out.println("Same.");
+      }else if (int1 <= int2 && int2 <= int3) {
+        System.out.println("Increasing.");
+      }else if (int1 > int2 && int2 > int3) {
+        System.out.println("Strictly decreasing.");
+      }else if (int1 >= int2 && int2 >= int3) {
+        System.out.println("Decreasing.");
+      }else{
+        System.out.println("Unordered.");
       }
     }
 
