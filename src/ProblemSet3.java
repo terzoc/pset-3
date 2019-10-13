@@ -34,7 +34,7 @@ public class ProblemSet3 {
         // ps.gpa();           // executes Exercise 4
         // ps.grade();         // executes Exercise 5
         // ps.cards();         // executes Exercise 6
-        ps.leapYear();      // executes Exercise 7
+        // ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -90,19 +90,18 @@ public class ProblemSet3 {
       long int2 = in.nextLong();
       System.out.print("Enter integer: ");
       long int3 = in.nextLong();
-
       if ((int1 < int2) && int2 < int3) {
-        System.out.println("Strictly increasing.");
+        System.out.println("\nStrictly increasing.");
       }else if (int1 == int2 && int2 == int3) {
-        System.out.println("Same.");
+        System.out.println("\nSame.");
       }else if (int1 <= int2 && int2 <= int3) {
-        System.out.println("Increasing.");
+        System.out.println("\nIncreasing.");
       }else if (int1 > int2 && int2 > int3) {
-        System.out.println("Strictly decreasing.");
+        System.out.println("\nStrictly decreasing.");
       }else if (int1 >= int2 && int2 >= int3) {
-        System.out.println("Decreasing.");
+        System.out.println("\nDecreasing.");
       }else{
-        System.out.println("Unordered.");
+        System.out.println("\nUnordered.");
       }
     }
 
@@ -124,6 +123,7 @@ public class ProblemSet3 {
       boolean validLetter = true;
 
       System.out.print("\nEnter a letter grade: ");
+      in.nextLine();
       String letterGrade = in.nextLine();
       letterGrade = letterGrade.toUpperCase();
       char letter = (letterGrade.charAt(0));
@@ -221,6 +221,7 @@ public class ProblemSet3 {
       String suitValue = "";
 
       System.out.print("\nEnter a Card: ");
+      in.nextLine();
       String card = in.nextLine();
       if (card.length() == 2) {
         card = card.toUpperCase();
@@ -325,6 +326,38 @@ public class ProblemSet3 {
      */
 
     public void state() {
+      final int fahrenheitBoiling = 212;
+      final int fahrenheitFreezing = 32;
+      final int celciusBoiling = 100;
+      final int celciusFreezing = 0;
+
+
+      System.out.print("\nEnter a temperature: ");
+      int temperature = in.nextInt();
+      System.out.print("Enter a scale: ");
+      in.nextLine();
+      String scale = in.nextLine();
+      scale = scale.toUpperCase();
+
+      if (scale.equals("F")) {
+        if (temperature >= fahrenheitBoiling) {
+          System.out.println("\nGas.");
+        }else if (temperature < fahrenheitBoiling && temperature > fahrenheitFreezing) {
+          System.out.println("\nLiquid.");
+        }else if (temperature <= fahrenheitFreezing) {
+          System.out.println("\nSolid.");
+        }
+      }else if (scale.equals("C")) {
+        if (temperature >= celciusBoiling) {
+          System.out.println("\nGas.");
+        }else if (temperature < celciusBoiling && temperature > celciusFreezing) {
+          System.out.println("\nLiquid.");
+        }else if (temperature <= celciusFreezing) {
+          System.out.println("\nSolid.");
+        }
+      }else {
+        System.out.println("\nThat's not a valid scale.");
+      }
 
     }
 
