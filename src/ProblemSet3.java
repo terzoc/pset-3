@@ -28,9 +28,9 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        ps.sign();          // executes Exercise 1
-        ps.parity();        // executes Exercise 2
-        ps.ordered();       // executes Exercise 3
+        // ps.sign();          // executes Exercise 1
+        // ps.parity();        // executes Exercise 2
+        // ps.ordered();       // executes Exercise 3
         ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
@@ -113,19 +113,58 @@ public class ProblemSet3 {
      */
 
     public void gpa() {
-      final double A_VALUE = 4;
-      final double B_VALUE = 3;
-      final double C_VALUE = 2;
-      final double D_VALUE = 1;
-      final double F_VALUE = 0;
-<<<<<<< HEAD
+      final double A_VALUE = 4.00;
+      final double B_VALUE = 3.00;
+      final double C_VALUE = 2.00;
+      final double D_VALUE = 1.00;
+      final double F_VALUE = 0.00;
       final double PLUS_BONUS = 0.33;
       final double MINUS_PENALTY = -0.33;
-      
-=======
->>>>>>> eeef01b53ada9c3bbd3f42b9958095d9ec5cdc87
+      double gpaBase = 0;
 
+
+      System.out.print("\nEnter a letter grade: ");
+      String letterGrade = in.nextLine();
+      letterGrade = letterGrade.toUpperCase();
+      char letter = (letterGrade.charAt(0));
+      switch (letter) {
+        case 'A':
+          gpaBase = A_VALUE;
+          break;
+        case 'B':
+          gpaBase = B_VALUE;
+          break;
+        case 'C':
+          gpaBase = C_VALUE;
+          break;
+        case 'D':
+          gpaBase = D_VALUE;
+          break;
+        case 'F':
+          gpaBase = F_VALUE;
+          break;
+        default:
+          System.out.println("\nThat's not a valid letter grade.");
+          break;
+      }
+      if (letterGrade.length() == 2) {
+        if ((letterGrade.charAt(1) == '+') && (letter != 'A' && letter != 'F')) {
+          double modifier = PLUS_BONUS;
+          double finalGPA = gpaBase + modifier;
+          System.out.printf("\nYour GPA is %.2f.\n", finalGPA);
+        }else if ((letterGrade.charAt(1) == '-') && (letter != 'F')) {
+          double modifier = MINUS_PENALTY;
+          double finalGPA = gpaBase + modifier;
+          System.out.printf("\nYour GPA is %.2f.\n", finalGPA);
+      }else if((letterGrade.charAt(1) == '+') ||(letterGrade.charAt(1) == '-')) {
+        System.out.printf("\nYour GPA is %.2f.\n", gpaBase);
+      }else{
+        System.out.println("\nThat's not a valid letter grade.");
+      }
+    }else{
+      System.out.printf("\nYour GPA is %.2f.\n", gpaBase);
     }
+  }
 
     /*
      * Exercise 5.
