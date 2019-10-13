@@ -31,7 +31,7 @@ public class ProblemSet3 {
         // ps.sign();          // executes Exercise 1
         // ps.parity();        // executes Exercise 2
         // ps.ordered();       // executes Exercise 3
-        ps.gpa();           // executes Exercise 4
+        // ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
@@ -173,8 +173,36 @@ public class ProblemSet3 {
      */
 
     public void grade() {
+      final double A_MAX = 100;
+      final double A_MIN = 90;
+      final double B_MAX = 89;
+      final double B_MIN = 80;
+      final double C_MAX = 79;
+      final double C_MIN = 70;
+      final double D_MAX = 69;
+      final double D_MIN = 60;
+      final double F_MAX = 59;
+      final double F_MIN = 0;
 
-    }
+      System.out.print("\nEnter a grade: ");
+      double numberGrade = in.nextDouble();
+
+      if ((numberGrade >= A_MIN) && (numberGrade <= A_MAX)) {
+        System.out.println("\nYou recieved an A.");
+      }else if ((numberGrade >= B_MIN) && (numberGrade <= B_MAX)) {
+        System.out.println("\nYou recieved a B.");
+      }else if ((numberGrade >= C_MIN) && (numberGrade <= C_MAX)) {
+        System.out.println("\nYou recieved a C.");
+      }else if ((numberGrade >= D_MIN) && (numberGrade <= D_MAX)) {
+        System.out.println("\nYou recieved a D.");
+      }else if ((numberGrade >=F_MIN) && (numberGrade <=F_MAX)) {
+        System.out.println("\nYou recieved an F.");
+      } else if (numberGrade < 0) {
+         System.out.println("\nGrades below 0 are invalid.");
+     } else if (numberGrade > 100) {
+         System.out.println("\nGrades above 100 are invalid.");
+     }
+   }
 
     /*
      * Exercise 6.
