@@ -1,21 +1,9 @@
-/**
- * Problem Set 3.
- *
- * It's time to put your skills to the test. This problem set focuses on using
- * conditional control structures. It's also your first introduction to methods,
- * so things look a little different. The main method is done for you. Lines 31-40
- * trigger each of the predefined methods, which you can think of as self-contained
- * executable pieces of logic. Write your code for each exercise in the
- * corresponding method.
- *
- * The specifications for each exercise are outlined below. Your job is to write
- * lines of code to produce answers to my questions. Each exercise requires that
- * you ask the user to enter one or more values. Your code must meet the
- * requirements set forth in this section (as well as the Deliverables section).
- *
- * Work through these exercises on your own. Experiment, make mistakes, ask
- * questions, and fix your mistakes. It's the only way to get good at programming.
- */
+/*
+* Problem Set 2.
+* Copyright (c) 2019. UCVTS and its affiliated.
+*
+* Use is allowed as long as credit is given.
+*/
 
 import java.util.Scanner;
 
@@ -28,15 +16,15 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        // ps.sign();          // executes Exercise 1
-        // ps.parity();        // executes Exercise 2
-        // ps.ordered();       // executes Exercise 3
-        // ps.gpa();           // executes Exercise 4
-        // ps.grade();         // executes Exercise 5
-        // ps.cards();         // executes Exercise 6
-        // ps.leapYear();      // executes Exercise 7
-        // ps.state();         // executes Exercise 8
-        // ps.months();        // executes Exercise 9
+        ps.sign();          // executes Exercise 1
+        ps.parity();        // executes Exercise 2
+        ps.ordered();       // executes Exercise 3
+        ps.gpa();           // executes Exercise 4
+        ps.grade();         // executes Exercise 5
+        ps.cards();         // executes Exercise 6
+        ps.leapYear();      // executes Exercise 7
+        ps.state();         // executes Exercise 8
+        ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
 
         in.close();
