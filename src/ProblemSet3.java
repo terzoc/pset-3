@@ -32,7 +32,7 @@ public class ProblemSet3 {
         // ps.parity();        // executes Exercise 2
         // ps.ordered();       // executes Exercise 3
         // ps.gpa();           // executes Exercise 4
-        ps.grade();         // executes Exercise 5
+        // ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
@@ -121,7 +121,7 @@ public class ProblemSet3 {
       final double PLUS_BONUS = 0.33;
       final double MINUS_PENALTY = -0.33;
       double gpaBase = 0;
-
+      boolean validLetter = true;
 
       System.out.print("\nEnter a letter grade: ");
       String letterGrade = in.nextLine();
@@ -145,25 +145,29 @@ public class ProblemSet3 {
           break;
         default:
           System.out.println("\nThat's not a valid letter grade.");
+          validLetter = false;
           break;
       }
-      if (letterGrade.length() == 2) {
-        if ((letterGrade.charAt(1) == '+') && (letter != 'A' && letter != 'F')) {
-          double modifier = PLUS_BONUS;
-          double finalGPA = gpaBase + modifier;
-          System.out.printf("\nYour GPA is %.2f.\n", finalGPA);
-        }else if ((letterGrade.charAt(1) == '-') && (letter != 'F')) {
-          double modifier = MINUS_PENALTY;
-          double finalGPA = gpaBase + modifier;
-          System.out.printf("\nYour GPA is %.2f.\n", finalGPA);
-      }else if((letterGrade.charAt(1) == '+') ||(letterGrade.charAt(1) == '-')) {
-        System.out.printf("\nYour GPA is %.2f.\n", gpaBase);
+      if (validLetter) {
+        if (letterGrade.length() == 2) {
+          if ((letterGrade.charAt(1) == '+') && (letter != 'A' && letter != 'F')) {
+            double modifier = PLUS_BONUS;
+            double finalGPA = gpaBase + modifier;
+            System.out.printf("\nYour GPA is %.2f.\n", finalGPA);
+          }else if ((letterGrade.charAt(1) == '-') && (letter != 'F')) {
+            double modifier = MINUS_PENALTY;
+            double finalGPA = gpaBase + modifier;
+            System.out.printf("\nYour GPA is %.2f.\n", finalGPA);
+        }else if(((letterGrade.charAt(1) == '+') ||(letterGrade.charAt(1) == '-')) && (letter == 'A')) {
+          System.out.printf("\nYour GPA is %.2f.\n", gpaBase);
+        }else{
+          System.out.println("\nThat's not a valid letter grade.");
+        }
       }else{
-        System.out.println("\nThat's not a valid letter grade.");
+        System.out.printf("\nYour GPA is %.2f.\n", gpaBase);
       }
-    }else{
-      System.out.printf("\nYour GPA is %.2f.\n", gpaBase);
     }
+
   }
 
     /*
@@ -211,6 +215,88 @@ public class ProblemSet3 {
      */
 
     public void cards() {
+      boolean validRank = true;
+      boolean vaildSuit = true;
+      String rankValue = "";
+      String suitValue = "";
+
+      System.out.print("\nEnter a Card: ");
+      String card = in.nextLine();
+      if (card.length() == 2) {
+        card = card.toUpperCase();
+        char rank = (card.charAt(0));
+        char suit = (card.charAt(1));
+
+        switch (rank) {
+          case '2':
+            rankValue = "Two";
+            break;
+          case '3':
+            rankValue = "Three";
+            break;
+          case '4':
+            rankValue = "Four";
+            break;
+          case '5':
+            rankValue = "Five";
+            break;
+          case '6':
+            rankValue = "Six";
+            break;
+          case '7':
+            rankValue = "Seven";
+            break;
+          case '8':
+            rankValue = "Eight";
+            break;
+          case '9':
+            rankValue = "Nine";
+            break;
+          case 'T':
+            rankValue = "Ten";
+            break;
+          case 'J':
+            rankValue = "Jack";
+            break;
+          case 'Q':
+            rankValue = "Queen";
+            break;
+          case 'K':
+            rankValue = "King";
+            break;
+          case 'A':
+            rankValue = "Ace";
+            break;
+          default:
+            validRank = false;
+            System.out.println("That's not a valid rank.");
+            break;
+        }
+
+        switch (suit) {
+          case 'C':
+            suitValue = "Clubs";
+            break;
+          case 'D':
+            suitValue = "Diamonds";
+            break;
+          case 'H':
+            suitValue = "Hearts";
+            break;
+          case 'S':
+            suitValue = "Spades";
+            break;
+          default:
+            vaildSuit = false;
+            System.out.println("That's not a valid Suit.");
+            break;
+        }
+        if (vaildSuit && validRank) {
+          System.out.println("\n" + rankValue + " of " + suitValue + ".");
+        }
+      }else {
+        System.out.println("\nThat's not a valid suit.");
+      }
 
     }
 
